@@ -31,10 +31,10 @@ public class RequestParamServlet extends HttpServlet {
         // 단일 파라미터
         System.out.println("[단일 파라미터 조회] - start");
 
-        String name = request.getParameter("name");
+        String username = request.getParameter("username");
         String age = request.getParameter("age");
 
-        System.out.println("name = " + name);
+        System.out.println("username = " + username);
         System.out.println("age = " + age);
 
         System.out.println("[단일 파라미터 조회] - end");
@@ -42,7 +42,7 @@ public class RequestParamServlet extends HttpServlet {
         // 같은 이름의 파라미터 여러 개
         System.out.println("[이름이 같은 복수 파라미터 조회] - start");
 
-        String[] names = request.getParameterValues("name");
+        String[] names = request.getParameterValues("username");
         for (String s : names) {
             System.out.println("s = " + s);
         }
